@@ -23,7 +23,7 @@ public class FavoritesFragment extends Fragment {
         binding = FragmentFavoritesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        favoritesViewModel.getText().observe(getViewLifecycleOwner(),binding.textFavorites::setText);
+        favoritesViewModel.getText().observe(getViewLifecycleOwner(), binding.textFavorites::setText);
         return root;
     }
 
