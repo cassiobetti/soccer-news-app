@@ -3,6 +3,7 @@ package com.cassio.soccernews.domain;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
 @Entity
 public class News {
     @PrimaryKey
@@ -13,9 +14,6 @@ public class News {
     public String link;
     public boolean favorite;
 }
-
-
-
 
 
 

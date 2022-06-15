@@ -2,10 +2,8 @@ package com.cassio.soccernews.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.hardware.lights.LightState;
 import android.net.Uri;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -43,7 +41,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         News news = this.news.get(position);
         holder.binding.tvTitle.setText(news.title);
         holder.binding.tvDescription.setText(news.description);
-        Picasso.get().load(news.image).fit().into(holder.binding.ivthumbmail);
+        Picasso.get().load(news.image).fit().into(holder.binding.ivThumbnail);
         // Implementação da funcionalidade de "Abrir Link":
         holder.binding.btOpenLink.setOnClickListener(view -> {
             Intent i = new Intent(Intent.ACTION_VIEW);
@@ -86,18 +84,3 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         void onFavorite(News news);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
